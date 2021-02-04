@@ -3,8 +3,8 @@
   <ul>
     <li>
       <v-card id="card" elevation="2">
-      <v-card-title>例</v-card-title>
-      <v-card-subtitle>ほにゃらら</v-card-subtitle>
+      <v-card-title>{{ title }}</v-card-title>
+      <v-card-subtitle>{{ date }}</v-card-subtitle>
       <v-img
         lazy-src="https://picsum.photos/id/11/10/6"
         max-height="150"
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-  /* export default {
+  export default {
     mounted() {
     const URL = "https://news.yahoo.co.jp/rss/categories/sports.xml";
 
@@ -35,14 +35,18 @@
     let items= rss_data.getElementsByTagName(`item`);
     //記事のタイトルを取得
     let title=items[0].getElementsByTagName(`title`).textContent;
+    this.title=title;
+    //記事の日付を取得
     let date=new Date(items[0].getElementsByTagName(`pubDate`).textContent);
-
+    this.date=date;
+    //記事の内容を取得
     let content_text=items[0].getElementsByTagName(`content`).textContent; //contentの内容を取得
     let buffer_dom=document.createElement(`div`); //バッファ的な要素の作成
     buffer_dom.innerHTML=content_text; //contentの内容を元にバッファ要素にdomを構築
     let thumbnail=buffer_dom.getElementsByTagName(`img`)[0].src; //最初のimgタグのsrcを取得
+    this.thumbnail=thumbnail;
   }
-} */
+}
       
 </script>
 
