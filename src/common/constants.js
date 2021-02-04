@@ -1,4 +1,5 @@
 export default {
+<<<<<<< HEAD
   menuItems: [
     {
       name: 'HOME',
@@ -26,3 +27,32 @@ export default {
     }
   ]
 }
+=======
+    menuItems: [
+      {
+        name: 'HOME',
+        url: '#'
+      },
+      {
+        name: 'Favorite',
+        url: '#'
+      },
+      {
+        name: 'Sport',
+        url: '#'
+      },
+      {
+        name: 'Tech',
+        url: '#'
+      },
+      {
+        name: 'Others',
+        url: '#'
+      },
+      {
+        name: 'ACCESS',
+        url: '#'
+      }
+    ]
+  }
+>>>>>>> sub1
